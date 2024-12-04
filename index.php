@@ -3,13 +3,21 @@ session_start();
 if (isset($_GET["n"]) && isset($_SESSION["n"]))
 {
     $mynumber=$_SESSION["n"];
-    if($mynumber==$_GET["n"]){
+    if($mynumber==$_GET["n"])
+    {
 
         echo "Right Guess!";
     }
-    else {
-
-        echo "Guess Again";
+    else 
+    {
+        if ($mynumber>$_GET["n"])
+        {
+            echo "The number you guess is low.";
+        }
+        else 
+        {
+            echo "The number you guess is high.";
+        }
     }
 }
 else {
