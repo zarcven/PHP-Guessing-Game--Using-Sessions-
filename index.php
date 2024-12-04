@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 if (isset($_GET["n"]) && isset($_SESSION["n"]))
 {
@@ -28,7 +28,7 @@ else {
 ?>
 
 <form method="get">
-    What is the number
+    What is the number<br><br>
     <input name="n"/><br><br>
     <button>Guess</button>
 </form>
